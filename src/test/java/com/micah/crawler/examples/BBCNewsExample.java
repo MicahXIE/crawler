@@ -21,8 +21,8 @@ import java.util.stream.Collectors;
 public class BBCNewsExample {
 
     @Slf4j
-    static class News163Spider extends Spider {
-        public News163Spider(String name) {
+    static class BBCNewsSpider extends Spider {
+        public BBCNewsSpider(String name) {
             super(name);
             this.startUrls(
                     "https://www.bbc.com/news/election/us2020",
@@ -63,7 +63,7 @@ public class BBCNewsExample {
     }
 
     public static void main(String[] args) {
-        Crawler.me(new News163Spider("BBC News")).start();
+        Crawler.me(new BBCNewsSpider("BBC News")).start();
     }
 
 }
